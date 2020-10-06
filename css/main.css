@@ -1,0 +1,223 @@
+body {
+  font: 20px 'Barlow Light';
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+p {
+  color: #2A4A5C;
+}
+.img {
+  height: 1000px;
+  width: 50%;
+  background-image: url("../img/bg.jpg");
+  background-size: 100% 100%;
+  float: left;
+  overflow: auto;
+}
+.logo {
+  width: 160px;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.main {
+  width: 50%;
+  height: 1000px;
+  background-color: #EFF6FF;
+  float: right;
+}
+.cont {
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 86%;
+  height: 500px;
+}
+.title {
+  margin-bottom: -6px;
+  color: #2A4A5C;
+}
+.links {
+  margin-top: 60px;
+  width: 100%;
+  height: 50px;
+}
+.fb {
+  width: 45%;
+  height: 40px;
+  background-color: #255A9B;
+  float: left;
+  transition: 0.5s;
+}
+.fb:hover {
+  background-color: #122b4a;
+  transition: 0.5s;
+}
+.fbimg {
+  height: 25px;
+  margin-top: 7.5px;
+  margin-left: 10px;
+  float: left;
+}
+.fbdisc {
+  font-size: 13px;
+  color: white;
+  margin-left: 70px;
+}
+.linkin {
+  width: 45%;
+  height: 40px;
+  background-color: #0076B6;
+  float: right;
+  transition: 0.5s;
+}
+.linkin:hover {
+  background-color: #005685;
+  transition: 0.5s;
+}
+.linkinimg {
+  height: 25px;
+  margin-top: 7.5px;
+  margin-left: 15px;
+  float: left;
+}
+.linkindisc {
+  font-size: 13px;
+  color: white;
+  margin-left: 70px;
+}
+.hr {
+  width: 50%;
+  margin-left: 25.5%;
+  margin-top: 30px;
+}
+
+.hr1 {
+  width: 45%;
+  float: left;
+}
+.hrdisc {
+  margin-top: -3px;
+  font-size: 14px;
+  margin-left: 135px;
+}
+.hr2 {
+  width: 45%;
+  float: right;
+  margin-top: -32px;
+}
+.inputs {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+}
+.email {
+  border-radius: 0;
+  border: 1px solid #AFAFAF;
+  height: 40px;
+  width: 45%;
+  float: left;
+}
+.email::placeholder {
+  transform: translateY(-13px);
+  font-size: 12px;
+}
+.phone::placeholder {
+  transform: translateY(-13px);
+  font-size: 12px;
+}
+.phone {
+  border-radius: 0;
+  border: 1px solid #AFAFAF;
+  height: 40px;
+  width: 45%;
+  float: right;
+}
+.email:focus {
+  border-left: 1px solid #3698FB;
+  border-radius: 0;
+  outline: 0;
+}
+.phone:focus {
+  border-left: 1px solid #3698FB;
+  border-radius: 0;
+  outline: 0;
+}
+.invest {
+  font-size: 15px;
+}
+.radioinvest p {
+  font-size: 15px;
+  float: left;
+  margin-right: 70px;
+  text-align: center;
+}
+input[type=radio] {
+  display: none;
+}
+label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 3px;
+  font-size: 13px;
+}
+label:before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: white;
+  border: 1px solid grey;
+}
+.radioinvest label:before {
+  border-radius: 8px;
+}
+input[type=radio]:checked + label:before {
+  content: "\2022";
+  color: #EFF6FF;
+  background-color: #3698FB;
+  font-size: 40px;
+  line-height: 4px;
+}
+.discriptionInvestor {
+  width: 45%;
+  height: 80px;
+  background-color: #EFF6FF;
+  margin-top: 70px;
+  box-shadow: 0 2px 10px #96A5B1;
+  border-radius: 5px;
+  padding-top: 1px;
+}
+.discriptionInvestor p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+.terms {
+  font-size: 17px;
+  margin-top: 30px;
+}
+.createAcc {
+  width: 40%;
+  height: 50px;
+  background-color: #3698FB;
+  margin-top: 50px;
+  border-radius: 8px;
+  text-align: center;
+}
+.createAcc p {
+  font-size: 17px;
+  color: #EFF6FF;
+  padding-top: 13px;
+}
+.createAcc:hover {
+  box-shadow: 0 0 5px black;
+  transition: 0.3s;
+}
+.createAcc:active {
+  box-shadow: inset 0 0 5px black;
+}
