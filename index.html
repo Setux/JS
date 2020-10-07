@@ -2,31 +2,32 @@
 <html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>iintoo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<div class="img">
+<div class="contant">
+  <div class="img">
   <div>
     <img class="logo" src="img/logo.svg" alt="Logo">
   </div>
 </div>
 <div class="main">
   <div class="cont">
-    <h2 class="title">Get iintoo it today</h2>
-    <p>There is no charge or obligation upon registration</p>
+    <h3 class="title">Get iintoo it today</h3>
+    <p class="titledisc">There is no charge or obligation upon registration</p>
     <div class="links">
-      <div class="fb">
+      <button class="fb">
         <img class="fbimg" src="img/facebook.svg" alt="Facebook">
         <p class="fbdisc">Register with Facebook</p>
-      </div>
-      <div class="linkin">
+      </button>
+      <button class="linkin">
         <img class="linkinimg" src="img/linkedin.svg" alt="LinkedIn">
         <p class="linkindisc">Register with LinkedIn</p>
-      </div>
+      </button>
     </div>
     <div class="hr">
       <div class="hr1"><hr></div>
@@ -34,23 +35,26 @@
       <div class="hr2"><hr></div>
     </div>
     <div class="inputs">
-      <input  class="email" type="email" placeholder="Email">
-      <input  class="phone" type="text" placeholder="Phone">
+      <form>
+        <input id="email" type="email"><label for="email">Email</label>
+        <input id="phone" type="text"><label class="pho" for="phone">Phone</label>
+      </form>
     </div>
-    <h3 class="title">What type of investor are you?</h3>
+    <h4 class="titlefooter">What type of investor are you?</h4>
     <p class="invest"> Select the type of invesor you are below</p>
     <div class="radioinvest">
-      <p><input id="check1" type="radio" name="typeOfInvestor"><label for="check1"></label>Individual</p>
-      <p><input id="check2" type="radio" name="typeOfInvestor"><label for="check2"></label>Business</p>
-      <p><input id="check3" type="radio" name="typeOfInvestor"><label for="check3"></label>IRA</p>
-      <p><input id="check4" type="radio" name="typeOfInvestor"><label for="check4"></label>Trust</p>
+      <p><input id="check1" type="radio" name="typeOfInvestor"><label class="label" for="check1"></label>Individual <span class="info">&#128712;</span></p>
+      <p><input id="check2" type="radio" name="typeOfInvestor"><label class="label" for="check2"></label>Business <span class="info">&#128712;</span></p>
+      <p><input id="check3" type="radio" name="typeOfInvestor"><label class="label" for="check3"></label>IRA <span class="info">&#128712;</span></p>
+      <p><input id="check4" type="radio" name="typeOfInvestor"><label class="label" for="check4"></label>Trust <span class="info">&#128712;</span></p>
     </div>
     <div class="discriptionInvestor">
       <p>I am a natural person investing on my <br> own behalf as a sole owner, joint tenant,<br> or tenant in common</p>
     </div>
-    <div class="terms"><p><input type="checkbox">I agree to terms and receiving notifications from iintoo <a href="#">View full terms</a></p></div>
-    <div class="createAcc"><p>Create Account</p></div>
+    <div class="terms"><p><input id="checkb" type="checkbox"><label for="checkb">I agree to terms and receiving notifications from iintoo &nbsp;</label><a href="#">View full terms</a></p></div>
+    <button type="submit" class="createAcc"><p>Create Account</p></button>
   </div>
+</div>
 </div>
 </body>
 
