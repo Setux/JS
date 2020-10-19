@@ -1,4 +1,12 @@
-
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes Medium'), local('TT-Lakes-Medium'),
+    url('TTLakes-Medium.woff2') format('woff2'),
+    url('TTLakes-Medium.woff') format('woff'),
+    url('TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
 /* Mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
     body {
