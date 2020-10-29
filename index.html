@@ -1,99 +1,60 @@
-<!DOCTYPE html>
-<html lang="ru">
+ <!DOCTYPE html>
+<html lang="">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>CPS - ремонт техники Dell</title>
+	<meta charset="utf-8">
+	<title>CPS - ремонт техники</title>
+	<meta name="description" content="Example description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__logo">
-            <button aria-label="Menu" class="header__button header__button--burger">
-            </button>
-        <div class="header__line onlyTablet">
-            <svg aria-hidden="true" width="2" height="32" viewBox="0 0 2 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="2" height="32" rx="1" fill="#EAEAEA"/>
-            </svg>
-        </div>
-            <a aria-label="To home" class="logo__a" href="#Home">
-                <div class="logo"></div>
-            </a>
-            <div class="header__line onlyMobile">
-                <svg aria-hidden="true" width="2" height="32" viewBox="0 0 2 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="2" height="32" rx="1" fill="#EAEAEA"/>
-                </svg>
-            </div>
-        </div>
-        <div class="header__contact onlyTablet">
-            <button aria-label="Phone" class="header__button header__button--phone">
-            </button>
-            <button aria-label="Message" class="header__button header__button--chat">
-            </button>
-            <button aria-label="Profile" class="header__button header__button--profile">
-            </button>
-            <div class="header__line onlyTablet">
-                <svg aria-hidden="true" width="2" height="32" viewBox="0 0 2 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="2" height="32" rx="1" fill="#EAEAEA"/>
-                </svg>
-            </div>
-        </div>
-        <div class="header__fix">
-            <button aria-label="Leave a request for equipment repair" class="header__button header__button--fix">
-            </button>
-            <button aria-label="Search your fixing device" class="header__button header__button--search">
-            </button>
-         </div>
-    </header>
-    <main class="main">
-        <div class="title">
-            <h1 class="title__h1">Услуги и сервисы</h1>
-            <button class="title__button onlyDesktop">
-                Оставить заявку &nbsp;
-                <svg aria-hidden="true" aria-label="Leave a request for equipment repair" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="20" fill="#FF3E79"/>
-                    <path d="M18.2581 23.4583L18.6668 23.0494L16.95 21.3322L16.5412 21.7411L16.3368 21.5367C16.0098 21.1687 15.6828 20.9643 15.3558 21.0052C15.1105 21.0052 14.9061 21.1687 14.7426 21.414C14.4973 21.8229 14.62 22.2726 14.6608 22.5588C14.6608 22.6406 14.7017 22.6815 14.7017 22.7632C14.7017 22.8859 14.7017 23.0494 14.4156 23.0903C14.0068 23.213 13.4754 23.3356 12.944 23.6218C12.2082 24.0307 11.7176 24.3987 11.4315 24.7666C9.91902 26.7291 10.0008 28.4055 10.0008 28.4872C10.0008 28.6099 10.0417 28.6917 10.1234 28.7325L11.2271 29.8773C11.3089 29.9591 11.3906 30 11.4724 30C11.4724 30 11.5133 30 11.595 30C12.0038 30 13.4754 29.9182 15.1922 28.569C15.5601 28.2828 15.928 27.7922 16.3368 27.0562C16.623 26.5656 16.7865 26.0341 16.8682 25.5844C16.95 25.2982 17.0726 25.2982 17.1953 25.2982C17.2361 25.2982 17.3179 25.339 17.3996 25.339C17.5631 25.3799 17.7267 25.4208 17.931 25.4208C18.1354 25.4208 18.3398 25.3799 18.5442 25.2573C18.7895 25.0937 18.953 24.8893 18.9939 24.644C19.0347 24.3169 18.8712 23.9898 18.5033 23.7036L18.2581 23.4583Z" fill="white"/>
-                    <path d="M26.884 14.8784L28.0188 14.326C28.0609 14.2835 28.1449 14.241 28.1869 14.1986L29.9101 11.8616C30.0362 11.6916 30.0362 11.4367 29.8681 11.3092L28.6913 10.1195C28.5652 9.99199 28.313 9.9495 28.1449 10.077L25.8333 11.8191C25.7913 11.8616 25.7493 11.9041 25.7072 11.989L25.1609 13.1363L21 17.2154L22.7652 19L26.884 14.8784Z" fill="white"/>
-                    <path d="M27.8527 23.0448C26.8636 22.0036 25.4393 21.6288 24.0941 22.0036L17.6453 15.1733C17.7244 14.7985 17.764 14.4653 17.764 14.0905C17.764 13.0493 17.3683 12.0081 16.6166 11.2167C15.588 10.0923 14.045 9.71742 12.6207 10.2172C12.5416 10.2588 12.4229 10.3838 12.3833 10.5504C12.3833 10.6753 12.4229 10.8003 12.502 10.9252L14.4406 12.966C14.8758 13.4241 14.8758 14.2154 14.4406 14.6735C14.0054 15.1317 13.2537 15.1317 12.8185 14.6735L10.8799 12.6328C10.7612 12.5495 10.6425 12.5078 10.4843 12.5495C10.3656 12.5495 10.2469 12.6744 10.2073 12.7994C9.73256 14.2571 10.0886 15.8813 11.1173 16.9642C11.8294 17.7555 12.8581 18.172 13.8867 18.172C14.2032 18.172 14.5593 18.1303 14.8758 18.047L21.3642 24.8773C21.0082 26.2933 21.4038 27.7927 22.3533 28.8339C23.105 29.6252 24.0546 30 25.0832 30C25.5184 30 25.914 29.9167 26.3492 29.7918C26.4679 29.7501 26.5866 29.6252 26.6262 29.5002C26.6658 29.3753 26.6262 29.2087 26.5075 29.1254L24.5689 27.0846C24.3711 26.8764 24.2128 26.5432 24.2128 26.21C24.2128 25.8768 24.3315 25.5853 24.5689 25.3354C24.8063 25.0855 25.0832 24.9606 25.3997 24.9606C25.7162 24.9606 25.9932 25.0855 26.2306 25.3354L28.1692 27.3762C28.2879 27.4595 28.4065 27.5011 28.5252 27.5011C28.6439 27.4595 28.7626 27.3762 28.8022 27.2512C28.9209 26.8348 29 26.3766 29 25.9185C29 24.8356 28.6044 23.7944 27.8527 23.0448Z" fill="white"/>
-                </svg>
-            </button>
-            <button class="title__button onlyDesktop">
-                Статус ремонта &nbsp;
-                <svg aria-hidden="true" aria-label="Check your fixing device" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40" height="40" rx="20" fill="#FF3E79"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11C12 10.4477 12.4477 10 13 10H27C27.5523 10 28 10.4477 28 11V28.5C27.1716 28.5 26.5001 29.1715 26.5 29.9999H25.5C25.4999 29.1715 24.8284 28.5 24 28.5C23.1716 28.5 22.5001 29.1715 22.5 29.9999H21.5C21.4999 29.1715 20.8284 28.5 20 28.5C19.1716 28.5 18.5001 29.1715 18.5 29.9999H17.5C17.4999 29.1715 16.8284 28.5 16 28.5C15.1716 28.5 14.5001 29.1715 14.5 29.9999H13.5C13.4999 29.1715 12.8284 28.5 12 28.5V11ZM21.4163 21.7884C20.5536 22.3443 19.4703 22.5936 18.3296 22.3827C16.5274 22.0472 15.0895 20.5326 14.8595 18.7114C14.4952 15.8261 16.9492 13.4201 19.8538 13.8802C21.656 14.1677 23.1034 15.6439 23.4006 17.4365C23.5828 18.5484 23.3239 19.5741 22.7871 20.4272L24.896 22.5265C25.2699 22.9003 25.2699 23.5138 24.896 23.8876C24.5126 24.2711 23.8991 24.2711 23.5252 23.8972L21.4163 21.7884ZM16.7059 18.0588C16.7059 16.7599 17.76 15.7058 19.0588 15.7058C20.3576 15.7058 21.4118 16.7599 21.4118 18.0588C21.4118 19.3576 20.3576 20.4117 19.0588 20.4117C17.76 20.4117 16.7059 19.3576 16.7059 18.0588Z" fill="white"/>
-                </svg>
-            </button>
-        </div>
-        <nav class="navigation">
-            <ul class="list">
-                <a class="list__a" href="#"><li class="list__li">Ремонтируемые устройства</li></a>
-                <a class="list__a" href="#"><li class="list__li">Дополнительные услуги</li></a>
-                <a class="list__a" href="#"><li class="list__li">Цены на услуги</li></a>
-                <a class="list__a" href="#"><li class="list__li">Адреса сервисных центров</li></a>
-                <a class="list__a" href="#"><li class="list__li">Специальные цены</li></a>
-                <a class="list__a" href="#"><li class="list__li">Отзывы</li></a>
-            </ul>
-        </nav>
-        <div class="description">
-            <div class="text">
-                <p class="description__p">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                <p class="description__p onlyTablet">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
-                <p class="description__p onlyDesktop">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
-            </div>
-            <button class="readMore">
-                    <div class="icon">
-                        <svg aria-hidden="true" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z" fill="#41F6D7"/>
-                        </svg>
-                    </div>
-                <p class="readMore__p">Читать далее</p>
-            </button>
-            <div class="picture">
-                 <img class="picture__img" src="img/img_3223.png" alt="Фото логотипа">
-            </div>
-        </div>
-    </main>
+	<main class="main">
+		<div class="main__menu menu">
+			<div class="menu__buttons">
+					<button aria-label="Close menu" class="menu__button--close"></button>
+				<div class="menu__logo">
+					<a aria-label="Home" class="logo__a--main" href="#"><div class="logo"></div></a>
+					<button class="menu__button--search">
+						<svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5006 11.0006H11.7106L11.4306 10.7306C12.6306 9.33063 13.2506 7.42063 12.9106 5.39063C12.4406 2.61063 10.1206 0.390626 7.32063 0.0506256C3.09063 -0.469374 -0.469374 3.09063 0.0506256 7.32063C0.390626 10.1206 2.61063 12.4406 5.39063 12.9106C7.42063 13.2506 9.33063 12.6306 10.7306 11.4306L11.0006 11.7106V12.5006L15.2606 16.7506C15.6706 17.1606 16.3306 17.1606 16.7406 16.7506L16.7506 16.7406C17.1606 16.3306 17.1606 15.6706 16.7506 15.2606L12.5006 11.0006ZM6.50063 11.0006C4.01063 11.0006 2.00063 8.99063 2.00063 6.50063C2.00063 4.01063 4.01063 2.00063 6.50063 2.00063C8.99063 2.00063 11.0006 4.01063 11.0006 6.50063C11.0006 8.99063 8.99063 11.0006 6.50063 11.0006Z" fill="white"/>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="menu__navigation navigation">
+				<ul class="navigation__points">
+					<li class="navigation__point"><a href="#repair" class="navigation__a navigation__a--active">Ремонт техники</a></li>
+					<li class="navigation__point"><a href="#services" class="navigation__a">Услуги и сервисы</a></li>
+					<li class="navigation__point"><a href="#for_companies" class="navigation__a">Корпоративным клиентам</a></li>
+					<li class="navigation__point"><a href="#for_retails" class="navigation__a">Продавцам техники</a></li>
+					<li class="navigation__point"><a href="#for_partners" class="navigation__a">Партнерам</a></li>
+					<li class="navigation__point"><a href="#for_manufacturers" class="navigation__a">Производителям</a></li>
+					<li class="navigation__point"><a href="#our_centers" class="navigation__a">Наши сервисные центры</a></li>
+					<li class="navigation__point"><a href="#contacts" class="navigation__a">Контакты</a></li>
+				</ul>
+				<div class="navigation__contacts contacts">
+					<div class="contacts__buttons">
+						<button class="contacts__button--phone"></button>
+						<button class="contacts__button--chat"></button>
+						<button class="contacts__button--profile">
+							<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.5 9C12.9853 9 15 6.98528 15 4.5C15 2.01472 12.9853 0 10.5 0C8.01472 0 6 2.01472 6 4.5C6 6.98528 8.01472 9 10.5 9Z" fill="white"/>
+								<path d="M0.0165859 16.6118C-0.113065 17.3412 0.535191 18 1.33903 18H18.6604C19.4902 18 20.1125 17.3412 19.9829 16.6118C19.2309 12.4 15.0561 10 9.99973 10C4.94333 10 0.768563 12.4 0.0165859 16.6118Z" fill="white"/>
+							</svg>
+						</button>
+					</div>
+					<p class="contacts__mail">mail@cps.com</p>
+					<p class="contacts__phone">8 800 890 8900</p>
+					<div class="contacts__language">
+						<a href="#ru_site" class="contacts__language--ru contacts__language--active">RU</a>
+						<a href="#en_site" class="contacts__language--en">EN</a>
+						<a href="#ch_site" class="contacts__language--ch">CH</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 </body>
 </html>
