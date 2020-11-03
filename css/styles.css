@@ -83,23 +83,17 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-.ui__button--close {
+.ui__button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #FF3E79;
     border: none;
-    background-image: url("../img/close.svg");
-    transition: transform 0.6s ease;
     cursor: pointer;
 }
-.ui__button--search {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #FF3E79;
-    border: none;
-    cursor: pointer;
+.ui__button--close {
+    background-image: url("../img/close.svg");
+    transition: transform 0.6s ease;
 }
 .ui__button--close:hover, .ui__button--close:focus {
     transform: rotate(360deg);
@@ -232,36 +226,51 @@ body {
     background-color: #7a0f30;
 }
 .ui__button--profile {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #FF3E79;
-    border: none;
-    cursor: pointer;
+    background-image: url("../img/profile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    transition: background-size 0.5s ease;
 }
 .ui__button--profile:hover, .ui__button--profile:focus {
     background-color: #cc0c47;
     outline: 0;
+    background-size: 60%;
 }
-.ui__button--profile:hover svg, .ui__button--profile:focus svg {
-    transform: scale(1.2);
-    transition: transform 0.5s ease;
-    filter: drop-shadow(2px 2px rgba(0,0,0,0.6));
-}
+
 .ui__button--profile:active {
     background-color: #7a0f30;
+}
+.footer__mail {
+    color: black;
+    text-decoration: none;
+    margin: 15px 0;
+    display: block;
+}
+.footer__mail:hover {
+    opacity: 0.8;
 }
 .footer__phone {
     font-size: 24px;
     line-height: 32px;
     font-weight: bold;
     margin-top: -10px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.footer__phone:hover {
+    opacity: 0.7;
 }
 .footer__language {
     margin-bottom: 20px;
     margin-left: -40px;
+    list-style: none;
 }
-.footer__language > a {
+.footer__language-item {
+    display: inline;
+}
+.footer__language-link {
     margin-right:7px;
     color: #1B1C21;
     text-decoration: none;
