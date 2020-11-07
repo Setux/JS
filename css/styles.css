@@ -364,7 +364,6 @@ body {
         position: relative;
         left:60px;
         top:20px;
-        tab-index: 2;
         background-color: transparent;
     }
     .firms__button-less::before {
