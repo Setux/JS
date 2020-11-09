@@ -1,6 +1,11 @@
-body {
-    width: 320px;
-    font-family: "TT Lakes", sans-serif;
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes Medium'), local('TT-Lakes-Medium'),
+    url('TTLakes-Medium.woff2') format('woff2'),
+    url('TTLakes-Medium.woff') format('woff'),
+    url('TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
     body {
@@ -19,12 +24,12 @@ body {
         padding-left: 20px;
         box-sizing: border-box;
         height:80px;
-        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+        background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
     }
-    .header__description {
+    .header__title {
         color: #7E7E82;
         text-transform: uppercase;
-        vertical-align: middle;
+        font-weight: normal;
         }
     .main__container-hidden {
         display: none;
@@ -108,12 +113,13 @@ body {
         padding-left: 20px;
         box-sizing: border-box;
         height:80px;
-        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+        padding-top: 10px;
+        background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
     }
-    .header__description {
+    .header__title  {
         color: #7E7E82;
         text-transform: uppercase;
-        vertical-align: middle;
+        font-weight: normal;
     }
     .main__container-hidden {
         display: flex;
@@ -182,19 +188,22 @@ body {
         top: 35%;
         transform: rotate(-45deg);
     }
-    .firms__button-more {
+    .firms__showMore {
         font-family: "TT Lakes", sans-serif;
-        border: none;
         font-weight: 500;
         line-height: 24px;
         font-size: 16px;
+    }
+    .button-more {
+        border: none;
         position: relative;
         left:50px;
         top:20px;
         tab-index: 2;
         background-color: transparent;
+        font-family: inherit;
     }
-    .firms__button-more::before {
+    .button-more::before {
         content:"";
         background-image: url("../img/more.svg");
         width:10px;
@@ -202,25 +211,21 @@ body {
         position: absolute;
         background-repeat: no-repeat;
         background-position: center;
-        left:-20px;
-        top:7px;
+        left:-15px;
+        top:6px;
     }
-    .firms__button-more:focus {
+    .button-more:focus {
         outline: none;
     }
-    .firms__button-less {
-        font-family: "TT Lakes", sans-serif;
+    .button-less {
+        font-family: inherit;
         border: none;
-        font-weight: 500;
-        line-height: 24px;
-        font-size: 16px;
         position: relative;
         left:50px;
         top:20px;
-        tab-index: 2;
         background-color: transparent;
     }
-    .firms__button-less::before {
+    .button-less::before {
         content:"";
         background-image: url("../img/more.svg");
         width:10px;
@@ -228,11 +233,11 @@ body {
         position: absolute;
         background-repeat: no-repeat;
         background-position: center;
-        left:-20px;
-        top:7px;
+        left:-15px;
+        top:6px;
         transform: rotate(180deg);
     }
-    .firms__button-less:focus {
+    .button-less:focus {
         outline: none;
     }
 }
@@ -254,14 +259,15 @@ body {
     }
     .header {
         padding-left: 20px;
+        padding-top: 10px;
         box-sizing: border-box;
         height:80px;
-        background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+        background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
     }
-    .header__description {
+    .header__title {
         color: #7E7E82;
         text-transform: uppercase;
-        vertical-align: middle;
+        font-weight: normal;
     }
     .main__container-hidden {
         display: flex;
@@ -290,12 +296,12 @@ body {
     .firms__item {
         border: 1px solid #EAEAEA;
         display: flex;
+        width: 240px;
         justify-content: space-between;
         padding: 10px 15px;
         background-color: #FFFFFF;
         border-radius: 6px;
         box-sizing: border-box;
-        flex-basis: 22%;
         height: 72px;
         margin-top: 16px;
         margin-right: 32px;
@@ -330,18 +336,22 @@ body {
         border-bottom: 2px solid white;
         border-right: 2px solid white;
     }
-    .firms__button-more {
+    .firms__showMore {
         font-family: "TT Lakes", sans-serif;
-        border: none;
         font-weight: 500;
         line-height: 24px;
         font-size: 16px;
-        position: relative;
-        left:60px;
-        top:20px;
-        background-color: transparent;
     }
-    .firms__button-more::before {
+    .button-more {
+        border: none;
+        position: relative;
+        left:50px;
+        top:20px;
+        tab-index: 2;
+        background-color: transparent;
+        font-family: inherit;
+    }
+    .button-more::before {
         content:"";
         background-image: url("../img/more.svg");
         width:10px;
@@ -349,24 +359,21 @@ body {
         position: absolute;
         background-repeat: no-repeat;
         background-position: center;
-        left:-20px;
-        top:7px;
+        left:-15px;
+        top:6px;
     }
-    .firms__button-more:focus {
+    .button-more:focus {
         outline: none;
     }
-    .firms__button-less {
-        font-family: "TT Lakes", sans-serif;
+    .button-less {
+        font-family: inherit;
         border: none;
-        font-weight: 500;
-        line-height: 24px;
-        font-size: 16px;
         position: relative;
-        left:60px;
+        left:50px;
         top:20px;
         background-color: transparent;
     }
-    .firms__button-less::before {
+    .button-less::before {
         content:"";
         background-image: url("../img/more.svg");
         width:10px;
@@ -374,11 +381,11 @@ body {
         position: absolute;
         background-repeat: no-repeat;
         background-position: center;
-        left:-20px;
-        top:7px;
+        left:-15px;
+        top:6px;
         transform: rotate(180deg);
     }
-    .firms__button-less {
+    .button-less:focus {
         outline: none;
     }
 }
