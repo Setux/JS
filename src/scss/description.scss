@@ -1,0 +1,82 @@
+.description {
+  @media screen and (max-width: 767px) {
+    &-hidden {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 110px;
+      overflow: hidden;
+    }
+    &-full {
+      width:90%;
+      margin-left: auto;
+      margin-right: auto;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &-hidden {
+      width: 100%;
+      margin-left: 2%;
+      height: 90px;
+      overflow: hidden;
+    }
+
+    &-full {
+      width: 100%;
+      margin-left: 2%;
+      height: auto;
+    }
+  }
+
+  &__button-more {
+    margin-left: 48px;
+    margin-top: 16px;
+  }
+  &__button {
+    &-off {
+      background-color: inherit;
+      border: none;
+      font-family: "TT Lakes Light", sans-serif;
+      font-size: 14px;
+      position: relative;
+      &::before {
+        content: '';
+        background-image: url("../img/more.svg");
+        width:10px;
+        height: 10px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        left:-15px;
+        top:6px;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+    &-on {
+      background-color: inherit;
+      border: none;
+      font-family: "TT Lakes Light", sans-serif;
+      font-size: 14px;
+      position: relative;
+      &::before {
+        content: '';
+        background-image: url("../img/more.svg");
+        width:10px;
+        height: 10px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        left:-15px;
+        top:6px;
+        transform: rotate(180deg);
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

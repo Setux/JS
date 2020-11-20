@@ -1,0 +1,141 @@
+.prices {
+  &__header {
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    height:80px;
+    width: 100%;
+    background: $gradientBackground;
+  }
+
+  &__title {
+    color: $textColor;
+    text-transform: uppercase;
+    font-weight: normal;
+    width:90%;
+  }
+
+  &__content {
+    position: relative;
+    height: 193px;
+    width: 240px;
+
+    &__header {
+      margin: 0;
+      font-size: 14px;
+      color:$textColor;
+      font-weight: normal;
+    }
+
+    &__description {
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__button {
+    width: 119px;
+    height: 32px;
+    background-color: $buttonColor;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    border: none;
+
+    &:active {
+      background-color: $activeColor;
+    }
+
+    &:hover {
+      background-color: $hoverColor;
+      outline: 0;
+    }
+
+    &:focus {
+      background-color: $hoverColor;
+      outline: none;
+    }
+
+    &-table {
+      width: 119px;
+      height: 32px;
+      background-color: #FF3E79;
+      border-radius: 16px;
+      border: none;
+
+      &:active {
+        background-color: $activeColor;
+      }
+
+      &:hover {
+        background-color: $hoverColor;
+        outline: 0;
+      }
+
+      &:focus {
+        background-color: $hoverColor;
+        outline: none;
+      }
+    }
+
+    &__text {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -20px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-family: "TT Lakes Light", sans-serif;
+      position: relative;
+
+      &::after {
+        content: '';
+        width:6px;
+        height: 6px;
+        border-right: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+        position: absolute;
+        right: 10px;
+        top:4px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__container {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__container {
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+
+      &-main {
+        width:100%;
+        background-color: $backgroundColor;
+        border-radius: 6px;
+        border: 1px solid #EAEAEA;
+      }
+    }
+
+    &__table {
+      &-head {
+        width:98%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &-body {
+        margin-left: auto;
+        margin-right: auto;
+        width:98%;
+        border-spacing: 0;
+      }
+    }
+  }
+}

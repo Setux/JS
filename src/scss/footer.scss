@@ -1,0 +1,66 @@
+.footer {
+  height: auto;
+  width: 100%;
+  margin-top: 40px;
+  box-shadow: 0 -1px 0 0 #D9FFF5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $textColor;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding: 25px 24px;
+    box-sizing: border-box;
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  &__copy {
+    @media screen and (max-width: 767px) {
+      width: 70%;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      width:31%;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    @media screen and (max-width: 767px) {
+      color: $textColor;
+      text-decoration: none;
+    }
+
+    @media screen and (min-width:768px) {
+      width:40%;
+      color: $textColor;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__notofert {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      text-align: right;
+      width: 29%;
+    }
+  }
+}

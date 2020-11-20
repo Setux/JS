@@ -1,0 +1,173 @@
+
+.firms {
+  &__header {
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    height:80px;
+    width: 100%;
+    background: $gradientBackground;
+  }
+
+  &__title {
+   color: $textColor;
+   text-transform: uppercase;
+   font-weight: normal;
+  }
+
+  &__container {
+    @media screen and (max-width: 767px) {
+      &-hidden {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width:97%;
+      margin-top: 8px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      align-content: space-between;
+      position: relative;
+
+      &-hidden {
+        height:180px;
+      }
+
+      &-visible {
+        height: auto;
+      }
+    }
+  }
+
+  &__item {
+    border: 1px solid #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: $backgroundColor;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 224px;
+    height: 72px;
+    margin-top: 16px;
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 253px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $buttonColor;
+    position: relative;
+
+    .a__arrow {
+      width:8px;
+      height: 8px;
+      border-right: 2px solid #FF3E79;
+      border-bottom: 2px solid #FF3E79;
+      position: absolute;
+      left:35%;
+      top: 35%;
+      transform: rotate(-45deg);
+    }
+
+    &:focus {
+      background-color: $buttonColor;
+      outline: none;
+
+      .a__arrow {
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+      }
+    }
+
+    &:active {
+      background-color: $buttonColor;
+      outline: none;
+
+      .a__arrow {
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+      }
+    }
+
+  }
+
+  &__showMore {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-family: "TT Lakes", sans-serif;
+      font-weight: 500;
+      line-height: 24px;
+      font-size: 16px;
+    }
+  }
+  &__button {
+    &-more {
+      border: none;
+      position: relative;
+      left:50px;
+      top:20px;
+      tab-index: 2;
+      background-color: transparent;
+      font-family: inherit;
+
+      &::before {
+        content:"";
+        background-image: url("../img/more.svg");
+        width:10px;
+        height: 10px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        left:-15px;
+        top:6px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-less {
+      font-family: inherit;
+      border: none;
+      position: relative;
+      left:50px;
+      top:20px;
+      background-color: transparent;
+
+      &::before {
+        content:"";
+        background-image: url("../img/more.svg");
+        width:10px;
+        height: 10px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        left:-15px;
+        top:6px;
+        transform: rotate(180deg);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+}

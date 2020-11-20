@@ -1,0 +1,243 @@
+.main {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow: hidden;
+      width:100%;
+  }
+
+  @media screen and (min-width:1440px) {
+    grid-column: 2/3;
+    position: relative;
+  }
+
+  &__title {
+    margin-left: 16px;
+    position: relative;
+
+    &:before {
+      content: '';
+      background-image: url("../img/line.svg");
+      position: absolute;
+      width:4px;
+      left:-16px;
+      height: 40px;
+    }
+  }
+  &__buttons {
+    @media screen and (max-width: 1439px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 1440px) {
+      position: absolute;
+      right: 0;
+      top: 26px;
+
+      .main__button {
+        margin-right: 60px;
+        position: relative;
+        background-color: inherit;
+        border: none;
+
+        &-fixing {
+          &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              background-color: $buttonColor;
+              background-image: url("../img/fix.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              top: -10px;
+              right: -36px;
+            }
+
+          &:focus {
+            &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              background-color: $hoverColor;
+              background-image: url("../img/fix.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              top: -10px;
+              right: -36px;
+            }
+          }
+
+          &:hover {
+            &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              background-color: $hoverColor;
+              background-image: url("../img/fix.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              top: -10px;
+              right: -36px;
+            }
+          }
+
+          &:active {
+            &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              background-color: $activeColor;
+              background-image: url("../img/fix.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              top: -10px;
+              right: -36px;
+            }
+          }
+          }
+
+        &-request {
+          &::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            background-color: $buttonColor;
+            background-image: url("../img/request.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            top: -10px;
+            right: -36px;
+          }
+
+          :focus {
+            &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              background-color: $hoverColor;
+              background-image: url("../img/request.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              top: -10px;
+              right: -36px;
+            }
+          }
+
+          &:hover {
+            &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              background-color: $hoverColor;
+              background-image: url("../img/request.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              top: -10px;
+              right: -36px;
+            }
+          }
+          &:active {
+            &::after {
+              content: '';
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              background-color: $activeColor;
+              background-image: url("../img/request.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              top: -10px;
+              right: -36px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  &__description {
+    @media screen and (max-width: 767px) {
+      width:100%
+    }
+
+    @media screen and (min-width: 768px) {
+      width:45%;
+      margin-left: 16px;
+      margin-top: 16px;
+    }
+  }
+
+  &__image {
+    @media screen and (max-width: 767px) {
+      margin-top: 16px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 45%;
+      margin-left: 48px;
+      margin-top: 16px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__firms {
+    margin-top: 16px;
+    width:inherit;
+    height: auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__tech {
+    margin-top: 16px;
+    width:inherit;
+    height: auto;
+  }
+
+  &__prices {
+    margin-top: 16px;
+    width:inherit;
+    height: auto;
+  }
+
+  &__commercial {
+    @media screen and (max-width: 767px) {
+      width: 80%;
+      margin-left: 16px;
+      line-height: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width:60%;
+      margin-left: 16px;
+      line-height: 20px;
+    }
+  }
+}

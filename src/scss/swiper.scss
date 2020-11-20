@@ -1,0 +1,88 @@
+$bullet: #DDDDDD;
+$bulletActive: #B5B6BC;
+.swiper {
+  @media screen and (max-width: 767px) {
+    &-container {
+      width:inherit;
+      height: auto;
+      z-index: 1;
+    }
+
+    &-wrapper {
+      border-radius: 10%;
+      height: 200px;
+      margin-left: 16px;
+      z-index: 1;
+    }
+
+    &-slide {
+      border: 1px solid gray;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+
+    &__link {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid $buttonColor;
+
+      &:focus {
+        background-color: $hoverColor;
+        outline: none;
+
+        .a__arrow {
+          border-bottom: 2px solid white;
+          border-right: 2px solid white;
+        }
+      }
+
+      &:active {
+        background-color:$buttonColor;
+
+        .a__arrow {
+          border-bottom: 2px solid white;
+          border-right: 2px solid white;
+        }
+      }
+
+      .a__arrow {
+        width:8px;
+        height: 8px;
+        border-right: 2px solid #FF3E79;
+        border-bottom: 2px solid #FF3E79;
+        position: absolute;
+        left:35%;
+        top: 35%;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &-pagination {
+      margin-top: 10px;
+      z-index: 1000;
+      position: static !important;
+
+      &-bullet {
+        background-color: $bullet !important;
+
+        &:active {
+          background-color: $bulletActive !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &-container {
+      display: none;
+    }
+  }
+}

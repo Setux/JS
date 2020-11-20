@@ -1,0 +1,48 @@
+.nav {
+  overflow-x: auto;
+  width:100%;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -20px;
+
+    .list {
+      &__li {
+        list-style-type: none;
+        display: inline-block;
+        color: #7E7E82;
+        text-align: center;
+        padding: 5px 15px;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 24px;
+        box-sizing: border-box;
+      }
+
+      &__a {
+        &:link {
+          text-decoration: none;
+          color: #7E7E82;
+        }
+
+        &:active {
+          .list__li {
+            border: 2px solid #B8FFEC;
+            background-color: white;
+            border-radius: 7px;
+            box-sizing: border-box;
+          }
+        }
+
+        &:focus {
+          .list__li {
+            border: 2px solid #B8FFEC;
+            background-color: white;
+            border-radius: 7px;
+          }
+        }
+      }
+    }
+  }
+}

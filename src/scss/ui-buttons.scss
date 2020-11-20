@@ -1,0 +1,23 @@
+
+.ui__button {
+  background-color: $buttonColor;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  &:active {
+    background-color: $activeColor;
+  }
+  &:hover {
+    background-color: $hoverColor;
+    outline: 0;
+  }
+  &:focus {
+    background-color: $hoverColor;
+    outline: 0;
+  }
+  &--close {
+    background-image: url("../img/close.svg");
+    transition: transform 0.6s ease;
+  }
+}
