@@ -38,31 +38,20 @@
     border-radius: 50%;
     border: 2px solid $buttonColor;
     bottom: -90px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
     &:focus {
-      background-color: $hoverColor;
+      background-color: $buttonColor;
       outline: none;
-      .a__arrow {
-        border-bottom: 2px solid white;
-        border-right: 2px solid white;
-      }
+      background-image: url("../img/arrow_active.svg");
     }
+
     &:active {
       background-color: $buttonColor;
       outline: none;
-      .a__arrow {
-        border-bottom: 2px solid white;
-        border-right: 2px solid white;
-      }
-    }
-    .a__arrow {
-      width:8px;
-      height: 8px;
-      border-right: 2px solid $buttonColor;
-      border-bottom: 2px solid $buttonColor;
-      position: absolute;
-      left:35%;
-      top:35%;
-      transform: rotate(-45deg);
+      background-image: url("../img/arrow_active.svg");
     }
   }
   @media screen and (max-width: 767px) {
@@ -127,7 +116,6 @@
       position: relative;
       left:50px;
       top:20px;
-      tab-index: 2;
       background-color: transparent;
       font-family: inherit;
 

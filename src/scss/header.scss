@@ -81,12 +81,36 @@
       background-image: url("../img/phone.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
+
+    &:hover {
+      animation: phone 0.8s infinite;
+      background-color: $hoverColor;
+      outline: 0;
+    }
+
+      &:focus {
+        animation: phone 0.8s infinite;
+        background-color: $hoverColor;
+        outline: 0;
+      }
     }
 
     &--chat {
       background-image: url("../img/chat.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
+
+      &:hover {
+        animation: jump 0.4s infinite alternate;
+        background-color: $hoverColor;
+        outline: 0;
+      }
+
+      &:focus {
+        animation: jump 0.4s infinite alternate;
+        background-color: $hoverColor;
+        outline: 0;
+      }
     }
 
     &--profile {

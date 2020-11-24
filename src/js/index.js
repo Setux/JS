@@ -1,98 +1,95 @@
 import '../scss/style.scss';
-let menu = document.querySelector('.menu-closed');
-let menuOpenButton = document.querySelector('.header__button--burger');
-let menuCloseButton = document.querySelector('.ui__button--close');
-let slider = document.querySelector('.swiper-container');
-let chatOpenButton = document.querySelector('.contacts__button--chat');
-let headChatOpenButton = document.querySelector('.header__button--chat')
-let chat = document.querySelector('.chat-closed');
-let chatCloseButton = document.querySelector('.chat__button');
-let callOpenButton = document.querySelector('.contacts__button--phone');
-let headCallOpenButton = document.querySelector('.header__button--phone')
-let callCloseButton = document.querySelector('.call__button');
-let call = document.querySelector('.call-closed');
-let body = document.querySelector('body');
+const body = document.querySelector('body');
+const call = body.querySelector('.call-closed');
+const menu = body.querySelector('.menu-closed');
+const menuOpenButton = document.querySelector('.header__button--burger');
+const menuCloseButton = menu.querySelector('.ui__button--close');
+const slider = document.querySelector('.swiper-container');
+const chatOpenButton = menu.querySelector('.contacts__button--chat');
+const headChatOpenButton = document.querySelector('.header__button--chat')
+const chat = body.querySelector('.chat-closed');
+const chatCloseButton = chat.querySelector('.chat__button');
+const callOpenButton = menu.querySelector('.contacts__button--phone');
+const headCallOpenButton = document.querySelector('.header__button--phone')
+const callCloseButton = call.querySelector('.call__button');
+const moreFirmsButton = body.querySelector('.firms__button-more');
+const firmsCont = body.querySelector('.firms__container-hidden');
+const moreTechsButton = body.querySelector('.tech__button-more');
+const techsCont = body.querySelector('.tech__container-hidden');
+
 menuOpenButton.addEventListener('click', function () {
-  menu.classList.remove('menu-closed');
-  menu.classList.add('menu-opened');
+  menu.classList.toggle('menu-opened')
   slider.style.display = 'none';
   body.style.overflow = 'hidden';
 });
 menuCloseButton.addEventListener('click', function () {
-  menu.classList.remove('menu-opened');
-  menu.classList.add('menu-closed');
+  menu.classList.toggle('menu-opened')
   slider.style.display = 'block';
-  body.style.overflow = '';
+  body.style.overflow = 'auto';
 });
 chatOpenButton.addEventListener('click', function () {
-  chat.classList.remove('chat-closed');
-  chat.classList.add('chat-opened');
+  chat.classList.toggle('chat-opened');
+  if (call.classList.contains('call-opened')) {
+    call.classList.toggle('call-opened');
+  }
 });
 chatCloseButton.addEventListener('click', function () {
-  chat.classList.remove('chat-opened');
-  chat.classList.add('chat-closed');
+  chat.classList.toggle('chat-opened');
   if (menu.classList.contains('menu-opened')) {
     body.style.overflow = 'hidden';
   } else {
-    body.style.overflow = '';
+    body.style.overflow = 'auto';
   }
 });
 headChatOpenButton.addEventListener('click', function () {
-  chat.classList.remove('chat-closed');
-  chat.classList.add('chat-opened');
+  chat.classList.toggle('chat-opened');
   body.style.overflow = 'hidden';
+  if (call.classList.contains('call-opened')) {
+    call.classList.toggle('call-opened');
+  }
 });
 callOpenButton.addEventListener('click', function () {
-  call.classList.remove('call-closed');
-  call.classList.add('call-opened');
+  call.classList.toggle('call-opened');
+  if (chat.classList.contains('chat-opened')) {
+    chat.classList.toggle('chat-opened');
+  }
 });
 callCloseButton.addEventListener('click', function () {
-  call.classList.remove('call-opened');
-  call.classList.add('call-closed');
+  call.classList.toggle('call-opened');
   if (menu.classList.contains('menu-opened')) {
     body.style.overflow = 'hidden';
   } else {
-    body.style.overflow = '';
+    body.style.overflow = 'auto';
   }
 });
 headCallOpenButton.addEventListener('click', function () {
-  call.classList.remove('call-closed');
-  call.classList.add('call-opened');
+  call.classList.toggle('call-opened');
   body.style.overflow = 'hidden';
+  if (chat.classList.contains('chat-opened')) {
+    chat.classList.toggle('chat-opened');
+  }
 });
 
-let moreFirmsButton = document.querySelector('.firms__button-more');
-let firmsCont = document.querySelector('.firms__container-hidden');
-let moreTechsButton = document.querySelector('.tech__button-more');
-let techsCont = document.querySelector('.tech__container-hidden');
 moreFirmsButton.addEventListener('click', function () {
-  if (firmsCont.classList.contains('firms__container-hidden')) {
-    firmsCont.classList.remove('firms__container-hidden');
-    firmsCont.classList.add('firms__container-visible');
+  if (!(firmsCont.classList.contains('firms__container-visible'))) {
+    firmsCont.classList.toggle('firms__container-visible');
+    moreFirmsButton.classList.toggle('firms__button-less');
     moreFirmsButton.textContent = 'Скрыть';
-    moreFirmsButton.classList.remove('firms__button-more');
-    moreFirmsButton.classList.add('firms__button-less');
   } else {
-    firmsCont.classList.remove('firms__container-visible');
-    firmsCont.classList.add('firms__container-hidden');
+    firmsCont.classList.toggle('firms__container-visible');
+    moreFirmsButton.classList.toggle('firms__button-less');
     moreFirmsButton.textContent = 'Показать все';
-    moreFirmsButton.classList.remove('firms__button-less');
-    moreFirmsButton.classList.add('firms__button-more');
   }
 });
 moreTechsButton.addEventListener('click', function () {
-  if (techsCont.classList.contains('tech__container-hidden')) {
-    techsCont.classList.remove('tech__container-hidden');
-    techsCont.classList.add('tech__container-visible');
+  if (!(techsCont.classList.contains('tech__container-visible'))) {
+    techsCont.classList.toggle('tech__container-visible');
+    moreTechsButton.classList.toggle('tech__button-less');
     moreTechsButton.textContent = 'Скрыть';
-    moreTechsButton.classList.remove('tech__button-more');
-    moreTechsButton.classList.add('tech__button-less');
   } else {
-    techsCont.classList.remove('tech__container-visible');
-    techsCont.classList.add('tech__container-hidden');
+    techsCont.classList.toggle('tech__container-visible');
+    moreTechsButton.classList.toggle('tech__button-less');
     moreTechsButton.textContent = 'Показать все';
-    moreTechsButton.classList.remove('tech__button-less');
-    moreTechsButton.classList.add('tech__button-more');
   }
 })
 

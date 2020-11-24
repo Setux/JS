@@ -35,6 +35,7 @@
     <list default="true" id="4f2305b7-5366-4f0c-bb00-cd85e664b0d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fonts/comic.ttf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
@@ -81,7 +82,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605620069844</updated>
-      <workItem from="1605620073418" duration="59877000" />
+      <workItem from="1605620073418" duration="64665000" />
+      <workItem from="1606217861768" duration="16718000" />
     </task>
     <servers />
   </component>
@@ -98,11 +100,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605719910311">
+    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605878244578">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605719910311" />
+    <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1605878244578" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606221273075">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606221273075" />
+    <state x="483" y="66" key="RollbackChangesDialog" timestamp="1605902968635">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="483" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605902968635" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606239568302">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606239568302" />
   </component>
 </project>

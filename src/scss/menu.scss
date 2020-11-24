@@ -51,6 +51,10 @@
        display: none;
       }
     }
+
+    .ui__button--search:hover svg, .ui__button--search:focus svg {
+
+    }
   }
 
   &__logo {
@@ -162,13 +166,13 @@
           background-position: 50% 50%;
 
           &:hover {
-            animation: jump 0.2s infinite alternate;
+            animation: jump 0.4s infinite alternate;
             background-color: $hoverColor;
             outline: 0;
           }
 
           &:focus {
-            animation: jump 0.2s infinite alternate;
+            animation: jump 0.4s infinite alternate;
             background-color: $hoverColor;
             outline: 0;
           }
@@ -311,11 +315,13 @@
       transform: translateX(-400px);
       transition: transform 0.5s ease;
       height:100%;
+      z-index: 10;
     }
 
     @media screen and (min-width: 1440px) {
       grid-column: 1/2;
       position: fixed;
+      height: 100%;
     }
   }
 
@@ -346,10 +352,10 @@
 @keyframes jump {
   from {
     background-position: 50% 40%;
-    transition: 0.5s;
+    transition: 0.7s;
   }
   to {
     background-position: 50% 60%;
-    transition: 0.5s;
+    transition: 0.7s;
   }
 }

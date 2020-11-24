@@ -3,7 +3,7 @@ $bulletActive: #B5B6BC;
 .swiper {
   @media screen and (max-width: 767px) {
     &-container {
-      width:inherit;
+      width: inherit;
       height: auto;
       z-index: 1;
     }
@@ -33,49 +33,35 @@ $bulletActive: #B5B6BC;
       height: 40px;
       border-radius: 50%;
       border: 2px solid $buttonColor;
+      background-image: url("../img/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
 
       &:focus {
-        background-color: $hoverColor;
+        background-color: $buttonColor;
         outline: none;
-
-        .a__arrow {
-          border-bottom: 2px solid white;
-          border-right: 2px solid white;
-        }
+        background-image: url("../img/arrow_active.svg");
       }
 
       &:active {
-        background-color:$buttonColor;
-
-        .a__arrow {
-          border-bottom: 2px solid white;
-          border-right: 2px solid white;
-        }
-      }
-
-      .a__arrow {
-        width:8px;
-        height: 8px;
-        border-right: 2px solid #FF3E79;
-        border-bottom: 2px solid #FF3E79;
-        position: absolute;
-        left:35%;
-        top: 35%;
-        transform: rotate(-45deg);
+        background-color: $buttonColor;
+        outline: none;
+        background-image: url("../img/arrow_active.svg");
       }
     }
+  }
 
-    &-pagination {
-      margin-top: 10px;
-      z-index: 1000;
-      position: static !important;
 
-      &-bullet {
-        background-color: $bullet !important;
+  &-pagination {
+    margin-top: 10px;
+    z-index: 1000;
+    position: static !important;
 
-        &:active {
-          background-color: $bulletActive !important;
-        }
+    &-bullet {
+      background-color: $bullet !important;
+
+      &:active {
+        background-color: $bulletActive !important;
       }
     }
   }
@@ -86,3 +72,4 @@ $bulletActive: #B5B6BC;
     }
   }
 }
+

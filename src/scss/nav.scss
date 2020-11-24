@@ -1,6 +1,11 @@
 .nav {
   overflow-x: auto;
   width:100%;
+  height: 70px;
+
+  @media screen and (max-width:1439px) {
+    box-shadow: inset -9px 0px 7px -7px #B4C1B7;
+  }
 
   &__list {
     display: flex;
@@ -11,7 +16,7 @@
       &__li {
         list-style-type: none;
         display: inline-block;
-        color: #7E7E82;
+        color: $textColor;
         text-align: center;
         padding: 5px 15px;
         white-space: nowrap;
@@ -40,6 +45,7 @@
             border: 2px solid #B8FFEC;
             background-color: white;
             border-radius: 7px;
+            box-sizing: border-box;
           }
         }
       }
