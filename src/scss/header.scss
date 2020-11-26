@@ -51,13 +51,12 @@
   @media screen and (min-width: 1440px) {
     display: none;
   }
-
-  &__button {
+  &__buttons {
     @media screen and (min-width: 768px) {
-        position: relative;
-        width: 180px;
+      position: relative;
+      width: 180px;
 
-        &::after {
+      &::after {
         content: '';
         background-image: url("../img/divider.svg");
         width: 2px;
@@ -66,21 +65,24 @@
         right:0;
         top:5px;
       }
+
       button {
         margin-left: 11px;
       }
     }
+  }
+
+  &__button {
+    background-repeat: no-repeat;
+    background-position: center;
 
     &--burger {
       background-image: url("../img/burger.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
+
     }
 
     &--phone {
       background-image: url("../img/phone.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
 
     &:hover {
       animation: phone 0.8s infinite;
@@ -97,8 +99,6 @@
 
     &--chat {
       background-image: url("../img/chat.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
 
       &:hover {
         animation: jump 0.4s infinite alternate;
@@ -115,20 +115,14 @@
 
     &--profile {
       background-image: url("../img/profile.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
     }
 
     &--fixing {
       background-image: url("../img/fix.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
     }
 
     &--search {
       background-image: url("../img/search.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
     }
   }
 }

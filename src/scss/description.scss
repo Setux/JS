@@ -1,30 +1,29 @@
 .description {
   @media screen and (max-width: 767px) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
     &-hidden {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
       height: 110px;
       overflow: hidden;
     }
+
     &-full {
-      width:90%;
-      margin-left: auto;
-      margin-right: auto;
       height: auto;
     }
   }
 
   @media screen and (min-width: 768px) {
+    width: 100%;
+    margin-left: 2%;
+
     &-hidden {
-      width: 100%;
-      margin-left: 2%;
       height: 70px;
       overflow: hidden;
     }
 
     &-full {
-      width: 100%;
       margin-left: 2%;
       height: auto;
     }
@@ -34,13 +33,15 @@
     margin-left: 48px;
     margin-top: 16px;
   }
+
   &__button {
+    background-color: inherit;
+    border: none;
+    font-family: "TT Lakes Light", sans-serif;
+    font-size: 14px;
+    position: relative;
+
     &-off {
-      background-color: inherit;
-      border: none;
-      font-family: "TT Lakes Light", sans-serif;
-      font-size: 14px;
-      position: relative;
       &::before {
         content: '';
         background-image: url("../img/more.svg");
@@ -52,16 +53,13 @@
         left:-15px;
         top:6px;
       }
+
       &:focus {
         outline: 0;
       }
     }
+
     &-on {
-      background-color: inherit;
-      border: none;
-      font-family: "TT Lakes Light", sans-serif;
-      font-size: 14px;
-      position: relative;
       &::before {
         content: '';
         background-image: url("../img/more.svg");

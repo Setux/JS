@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     margin-left: -20px;
+    width: auto;
 
     .list {
       &__li {
@@ -18,7 +19,6 @@
         display: inline-block;
         color: $textColor;
         text-align: center;
-        padding: 5px 15px;
         white-space: nowrap;
         font-size: 16px;
         line-height: 24px;
@@ -26,27 +26,29 @@
       }
 
       &__a {
-        &:link {
-          text-decoration: none;
-          color: #7E7E82;
-        }
+        display: block;
+        padding: 5px 15px;
+        box-sizing: border-box;
 
         &:active {
-          .list__li {
-            border: 2px solid #B8FFEC;
-            background-color: white;
-            border-radius: 7px;
-            box-sizing: border-box;
-          }
+          border: 2px solid #B8FFEC;
+          background-color: white;
+          border-radius: 7px;
+          margin-right: -2px;
+          margin-left: -2px;
         }
 
         &:focus {
-          .list__li {
-            border: 2px solid #B8FFEC;
-            background-color: white;
-            border-radius: 7px;
-            box-sizing: border-box;
-          }
+          border: 2px solid #B8FFEC;
+          background-color: white;
+          border-radius: 7px;
+          margin-right: -2px;
+          margin-left: -2px;
+        }
+
+        &:link {
+          text-decoration: none;
+          color: #7E7E82;
         }
       }
     }

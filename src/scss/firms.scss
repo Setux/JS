@@ -74,17 +74,13 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    &:focus {
+    &:focus, &:active {
       background-color: $buttonColor;
       outline: none;
       background-image: url("../img/arrow_active.svg");
     }
 
-    &:active {
-      background-color: $buttonColor;
-      outline: none;
-      background-image: url("../img/arrow_active.svg");
-    }
+
 
   }
 
@@ -101,14 +97,13 @@
     }
   }
   &__button {
-    &-more {
-      border: none;
-      position: relative;
-      left:50px;
-      top:20px;
-      background-color: transparent;
-      font-family: inherit;
+    border: none;
+    position: relative;
+    transform: translate(50px, 20px);
+    background-color: transparent;
+    font-family: inherit;
 
+    &-more {
       &::before {
         content:"";
         background-image: url("../img/more.svg");
@@ -127,12 +122,6 @@
     }
 
     &-less {
-      font-family: inherit;
-      border: none;
-      position: relative;
-      left:50px;
-      top:20px;
-      background-color: transparent;
 
       &::before {
         content:"";

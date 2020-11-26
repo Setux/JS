@@ -5,17 +5,16 @@
   height: 40px;
   border-radius: 50%;
   border: none;
+
   &:active {
     background-color: $activeColor;
   }
-  &:hover {
+
+  &:hover, &:focus {
     background-color: $hoverColor;
     outline: 0;
   }
-  &:focus {
-    background-color: $hoverColor;
-    outline: 0;
-  }
+
   &--close {
     background-image: url("../img/close.svg");
     transition: transform 0.6s ease;
@@ -23,6 +22,7 @@
       transform: rotate(360deg);
     }
   }
+
   &--search {
     &:hover svg, &:focus svg {
       animation: grow 0.5s infinite alternate;

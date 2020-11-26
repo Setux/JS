@@ -8,6 +8,7 @@
   @media screen and (max-width: 1439px) {
     &-closed {
       transform: translateX(-400px);
+      z-index: 11;
     }
 
     &-opened {

@@ -20,7 +20,7 @@ $bulletActive: #B5B6BC;
       display: flex;
       justify-content: space-between;
       padding: 10px 15px;
-      background-color: #FFFFFF;
+      background-color: $backgroundColor;
       border-radius: 5px;
       box-sizing: border-box;
       z-index: 1;
@@ -37,13 +37,7 @@ $bulletActive: #B5B6BC;
       background-repeat: no-repeat;
       background-position: center;
 
-      &:focus {
-        background-color: $buttonColor;
-        outline: none;
-        background-image: url("../img/arrow_active.svg");
-      }
-
-      &:active {
+      &:focus, &:active {
         background-color: $buttonColor;
         outline: none;
         background-image: url("../img/arrow_active.svg");
