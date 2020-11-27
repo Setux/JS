@@ -16,7 +16,33 @@ const moreFirmsButton = body.querySelector('.firms__button-more');
 const firmsCont = body.querySelector('.firms__container-hidden');
 const moreTechsButton = body.querySelector('.tech__button-more');
 const techsCont = body.querySelector('.tech__container-hidden');
+const textButton = body.querySelector('.description__button');
+const description = body.querySelector('.description-hidden');
 
+const showFirms = function() {
+  moreFirmsButton.classList.toggle('firms__button-less');
+  moreFirmsButton.textContent = 'Скрыть';
+};
+const showTechs = function () {
+  moreTechsButton.classList.toggle('tech__button-less');
+  moreTechsButton.textContent = 'Скрыть';
+};
+const showDesc = function () {
+  textButton.classList.toggle('description__button-on');
+  textButton.textContent = 'Скрыть';
+};
+const hideFirms = function() {
+  moreFirmsButton.classList.toggle('firms__button-less');
+  moreFirmsButton.textContent = 'Показать все';
+};
+const hideTechs = function() {
+  moreTechsButton.classList.toggle('tech__button-less');
+  moreTechsButton.textContent = 'Показать все';
+};
+const hideDesc = function() {
+  textButton.classList.toggle('description__button-on');
+  textButton.textContent = 'Читать далее';
+};
 menuOpenButton.addEventListener('click', function () {
   menu.classList.toggle('menu-opened')
   slider.style.display = 'none';
@@ -73,41 +99,28 @@ headCallOpenButton.addEventListener('click', function () {
 moreFirmsButton.addEventListener('click', function () {
   if (!(firmsCont.classList.contains('firms__container-visible'))) {
     firmsCont.classList.toggle('firms__container-visible');
-    moreFirmsButton.classList.toggle('firms__button-less');
-    moreFirmsButton.textContent = 'Скрыть';
+    showFirms();
   } else {
     firmsCont.classList.toggle('firms__container-visible');
-    moreFirmsButton.classList.toggle('firms__button-less');
-    moreFirmsButton.textContent = 'Показать все';
+    hideFirms();
   }
 });
 moreTechsButton.addEventListener('click', function () {
   if (!(techsCont.classList.contains('tech__container-visible'))) {
     techsCont.classList.toggle('tech__container-visible');
-    moreTechsButton.classList.toggle('tech__button-less');
-    moreTechsButton.textContent = 'Скрыть';
+    showTechs();
   } else {
     techsCont.classList.toggle('tech__container-visible');
-    moreTechsButton.classList.toggle('tech__button-less');
-    moreTechsButton.textContent = 'Показать все';
+    hideTechs();
   }
 })
-
-let textButton = document.querySelector('.description__button');
-let description = document.querySelector('.description-hidden');
 textButton.addEventListener('click', function () {
-  if (description.classList.contains('description-hidden')) {
-    description.classList.remove('description-hidden');
-    description.classList.add('description-full');
-    textButton.classList.remove('description__button-off');
-    textButton.classList.add('description__button-on');
-    textButton.textContent = 'Скрыть';
+  if (!(description.classList.contains('description-full'))) {
+    description.classList.toggle('description-full');
+    showDesc();
   } else {
-    description.classList.add('description-hidden');
-    description.classList.remove('description-full');
-    textButton.classList.add('description__button-off');
-    textButton.classList.remove('description__button-on');
-    textButton.textContent = 'Читать далее';
+    description.classList.toggle('description-full');
+    hideDesc();
   }
 })
 

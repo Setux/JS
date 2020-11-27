@@ -58,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/Ревью/Block 1.6" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,7 +83,8 @@
       <option name="presentableId" value="Default" />
       <updated>1605620069844</updated>
       <workItem from="1605620073418" duration="64665000" />
-      <workItem from="1606217861768" duration="31660000" />
+      <workItem from="1606217861768" duration="31674000" />
+      <workItem from="1606478595440" duration="3256000" />
     </task>
     <servers />
   </component>
@@ -107,10 +108,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1605878244578" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606221273075">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1606478641301">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606221273075" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606478641301" />
     <state x="483" y="66" key="RollbackChangesDialog" timestamp="1605902968635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
