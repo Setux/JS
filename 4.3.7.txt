@@ -1,0 +1,7 @@
+X-SuperSecretCode
+{
+    "user": {
+        "username": "setux",
+        "email": "setux@setux.com",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZjJmMDNkNjk5ZDE2MDMyNDZmZDg1MyIsInVzZXJuYW1lIjoic2V0dXgiLCJleHAiOjE2MTUxNDU2NTEsImlhdCI6MTYwOTk2MTY1MX0.5T-3pxo2RshIsph-XNPfVOAbHLwvhOvd5TTappTNPvA"
+    }
