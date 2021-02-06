@@ -1,12 +1,11 @@
 import React from "react";
+import { nanoid } from "nanoid";
 import "./app.css";
-import NewTaskForm from "../new-task-form";
-import TaskList from "../task-list";
-import Footer from "../footer";
+import NewTaskForm from "../New-task-form";
+import TaskList from "../Task-list";
+import Footer from "../Footer";
 
 export default class App extends React.Component {
-
-    maxId = 10;
 
     state = {
         todoData: [
@@ -15,9 +14,9 @@ export default class App extends React.Component {
             this.createTodoEl("Task 3")
         ],
         buttonsData: [
-            {label: "All", active: true, id: 1},
-            {label: "Active", active: false, id: 2},
-            {label: "Completed", active: false, id: 3},
+            {label: "All", isActive: true, id: 1},
+            {label: "Active", isActive: false, id: 2},
+            {label: "Completed", isActive: false, id: 3},
         ],
         filteredData: [],
         isSearch: false
@@ -47,11 +46,11 @@ export default class App extends React.Component {
     onFilter = (id) => {
         this.setState(({todoData, buttonsData}) => {
             const falseData = buttonsData.map((el) => {
-                return {...el, active:false}
+                return {...el, isActive:false}
             })
             const index = buttonsData.findIndex((el) => el.id === id)
             const oldButtonItem = buttonsData[index]
-            const newButtonItem = {...oldButtonItem, active: true}
+            const newButtonItem = {...oldButtonItem, isActive: true}
             const newButtonData = [
                 ...falseData.slice(0, index),
                 newButtonItem,
@@ -59,18 +58,24 @@ export default class App extends React.Component {
             ]
             let filterData
             let isSearched
+
             switch(id) {
                 case 1:
                     filterData = []
                     isSearched = false
                     break
+
                 case 2:
                     filterData = todoData.filter((el) => !el.completed)
                     isSearched = true
                     break
+
                 case 3:
                     filterData = todoData.filter((el) => el.completed)
                     isSearched = true
+                    break
+
+                default:
                     break
             }
             return {
@@ -196,7 +201,8 @@ export default class App extends React.Component {
             completed: false,
             editing: false,
             checked: false,
-            id: this.maxId++
+            time: new Date(),
+            id: nanoid(8)
         }
     }
 

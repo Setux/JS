@@ -1,29 +1,34 @@
 import React from "react";
-import Task from "../task/task.js";
-import EditItem from "../edit-item/edit-item.js";
+import PropTypes from "prop-types"
+import Task from "./Task/task.js";
+import EditItem from "../Edit-item/edit-item.js";
 import "./task-list.css";
 
 export default class TaskList extends React.Component {
+    static propTypes = {
+        todos: PropTypes.arrayOf(PropTypes.object).isRequired,
+        onDeleted: PropTypes.func.isRequired,
+        onEdit: PropTypes.func.isRequired,
+        onComplete: PropTypes.func.isRequired,
+        onChange: PropTypes.func.isRequired,
+    }
 
     render() {
         const {todos, onDeleted, onEdit, onComplete, onChange} = this.props
         const elements = todos.map((task) => {
-            let styleClass;
             const {id, ...itemProps} = task
-
-            if (task.completed) {
-                styleClass = "completed"
-            } else if (task.editing) {
-                styleClass = "editing"
+            const classNames = require('classnames')
+            const taskClass = classNames({'completed':task.completed}, {'editing':task.editing})
+            if (task.editing) {
                 return (
-                    <li key={id} className={styleClass}>
+                    <li key={id} className={taskClass}>
                         <EditItem {...itemProps}
                         onChange={() => onChange(id)}/>
                     </li>
                 )
             }
             return (
-                <li key={id} className={styleClass}>
+                <li key={id} className={taskClass}>
                     <Task
                         {...itemProps}
                         onDeleted={() => onDeleted(id)}

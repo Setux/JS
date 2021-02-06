@@ -1,8 +1,16 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 export default class EditItem extends React.Component {
+    static defaultProps = {
+        label: "Editing task",
+    }
+    static propTypes = {
+        label: PropTypes.string
+    }
+
     state = {
-        label: this.props.label
+        label: ''
     }
 
     onLabelChange = (e) => {
@@ -20,9 +28,10 @@ export default class EditItem extends React.Component {
     }
 
     render() {
+        const { label } = this.props
         return(
             <form onSubmit={this.onSubmit}>
-                <input className="edit" defaultValue={this.state.label} onChange={this.onLabelChange}/>
+                <input className="edit" defaultValue={label} onChange={this.onLabelChange}/>
             </form>
         )
     }
