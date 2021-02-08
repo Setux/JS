@@ -174,7 +174,7 @@ export default class App extends React.Component {
     const { todoData, buttonsData, filteredData, isSearch } = this.state;
     const toDo = todoData.filter((el) => !el.completed).length;
     let list;
-    if (isSearch && todoData.length !== 0) {
+    if (isSearch && filteredData.length !== 0) {
       list = (
         <TaskList
           todos={filteredData}
@@ -191,7 +191,7 @@ export default class App extends React.Component {
           onDeleted={this.deleteItem}
           onEdit={this.onEdit}
           onComplete={this.completedItem}
-          onChange={this.editItem}
+          onChangeLabel={this.editItem}
         />
       );
     } else {

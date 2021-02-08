@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { formatDistanceToNow } from 'date-fns';
 
 const Task = (props) => {
-  const { label, time, checked, onDeleted, onEdit, onComplete } = props;
+  const { label, checked, time, onDeleted, onEdit, onComplete } = props;
   const createdTime = formatDistanceToNow(time);
   return (
     <div className="view">
@@ -21,12 +21,9 @@ const Task = (props) => {
     </div>
   );
 };
-Task.defaultProps = {
-  label: 'Unnamed Task',
-};
 
 Task.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   time: PropTypes.instanceOf(Date).isRequired,
   checked: PropTypes.bool.isRequired,
   onDeleted: PropTypes.func.isRequired,
