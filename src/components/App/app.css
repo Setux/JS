@@ -83,3 +83,7 @@ body {
     -moz-text-rendering: optimizeLegibility;
     text-rendering: optimizeLegibility;
 }
+.empty-message {
+    text-align: center;
+    font-size: 20px;
+}

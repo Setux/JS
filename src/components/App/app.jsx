@@ -173,8 +173,9 @@ export default class App extends React.Component {
   render() {
     const { todoData, buttonsData, filteredData, isSearch } = this.state;
     const toDo = todoData.filter((el) => !el.completed).length;
-    const list =
-      isSearch === true ? (
+    let list;
+    if (isSearch && todoData.length !== 0) {
+      list = (
         <TaskList
           todos={filteredData}
           onDeleted={this.deleteItem}
@@ -182,7 +183,9 @@ export default class App extends React.Component {
           onComplete={this.completedItem}
           onChange={this.editItem}
         />
-      ) : (
+      );
+    } else if (!isSearch && todoData.length !== 0) {
+      list = (
         <TaskList
           todos={todoData}
           onDeleted={this.deleteItem}
@@ -191,6 +194,9 @@ export default class App extends React.Component {
           onChange={this.editItem}
         />
       );
+    } else {
+      list = <p className="empty-message">There is no todos yet</p>;
+    }
 
     return (
       <section className="todoapp">
